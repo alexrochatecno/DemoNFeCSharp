@@ -1,0 +1,6 @@
+[03/01/2020 15:35:23:184] 5972 - EspdTemplateNotFoundException : Arquivo de template do conversor não encontrado: D:\Git\Demos_NF\C#\Demo NFe CSharp\DemoNFeCSharp\DemoNFeCSharp\bin\Debug\Templates\vm50\Conversor\NFeDataSets.xml
+[03/01/2020 16:07:08:234] 34028 - EspdDataSetException : O Campo [xLgr_E06] referente a [Logradouro] deve ser preenchido.
+[03/01/2020 16:07:08:246] 34028 - EspdNFeDataSetException : O Campo [xLgr_E06] referente a [Logradouro] deve ser preenchido.
+[03/01/2020 17:47:35:883] 14544 - EspdNFeVersaoManualException : Versão do Manual informada: vm60 não é suportada. Utilize: 2.0.2a, 3.0, 4.0, 5.0, 5.0a ou 6.0
+[03/01/2020 17:49:35:363] 4092 - EspdDataSetException : Conteúdo 4 é inválido para o campo tpImp_B21 [Formato de Impressao da DANFE]. Dica: 0-Sem geração/1-Retrato/2-Paisagem/3-Simplificado
+[03/01/2020 17:49:35:365] 4092 - EspdNFeDataSetException : Conteúdo 4 é inválido para o campo tpImp_B21 [Formato de Impressao da DANFE]. Dica: 0-Sem geração/1-Retrato/2-Paisagem/3-Simplificado

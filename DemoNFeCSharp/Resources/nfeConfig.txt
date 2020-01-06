@@ -1,0 +1,73 @@
+[NFE]
+UF=PR
+CNPJ=08187168000160
+ArquivoServidoresHom=C:\Program Files\TecnoSpeed\NFe\arquivos\nfeServidoresHom.ini
+ArquivoServidoresProd=C:\Program Files\TecnoSpeed\NFe\arquivos\nfeServidoresProd.ini
+DiretorioEsquemas=C:\Program Files\TecnoSpeed\NFe\arquivos\Esquemas
+DiretorioTemplates=C:\Program Files\TecnoSpeed\NFe\arquivos\Templates
+DiretorioLog=Log\
+DiretorioLogErro=LogErro\
+DiretorioTemporario=Temporario\
+TipoCertificado=FILE
+NomeCertificado=CN=TECNOSPEED SA:08187168000160, OU=Certificado PJ A1, O=ICP-Brasil, C=BR, S=, L=, E=, SE=6D 8C 19 04 25 53 86 82
+VersaoManual=6.0
+ConexaoSegura=1
+Proxy=
+Senha=
+Usuario=
+TimeOut=0
+Repositorio=CURRENT_USER_STORE
+PINCODE=
+Ambiente=2
+ValidarEsquema=1
+MaxSizeLoteEnvio=500
+DiretorioXmlDestinatario=XmlDestinatario\
+AnexarDanfePDF=1
+CaracteresRemoverAcentos=
+ValidarEsquemaAntesEnvio=0
+IgnoreInvalidCertificates=0
+ModoOperacao=NORMAL
+SalvarLogsEmDisco=1
+DiretorioDownloads=Downloads\
+AtualizarArquivoServidores=1
+CaracteresRemoverAcentos=·ÈÌÛ˙‡ËÏÚ˘‚ÍÓÙ˚‰ÎÔˆ¸„ıÒÁ¡…Õ”⁄¿»Ã“Ÿ¬ Œ‘€ƒÀœ÷‹√’—«∫™
+IdCSRT=
+CSRT=
+
+[MAIL]
+Servidor=mail.tecnospeed.com.br
+EmailRemetente=contato@tecnospeed.com.br
+EmailDestinatario=contato@tecnospeed.com.br
+Assunto=Exemplo de envio de DANFE por email
+Mensagem=O arquivo esta anexo
+Usuario=mail.tecnospeed.com.br
+Senha=mail@tecno
+Autenticacao=1
+Porta=587
+TimeOut=30000
+CCo=
+CC=
+ConteudoHtml=0
+
+[DANFE]
+infCplMaxCol=71
+InfCplMaxRow=495
+FraseContingencia=Danfe em contingencia - Impresso em decorrencia de problemas tecnicos
+FraseHomologacao=SEM VALOR FISCAL
+ModeloRetrato=C:\Program Files\TecnoSpeed\NFe\arquivos\templates\vm60\Danfe\retrato.rtm
+ModeloPaisagem=C:\Program Files\TecnoSpeed\NFe\arquivos\templates\vm60\Danfe\retrato.rtm
+QtdeCopias=1
+ImprimirDuplicata=0
+ImprimirTarjaCancelada=1
+ImprimirLocalRetiradaEntrega=1
+ModeloDanfeSimplificado=C:\Program Files\TecnoSpeed\NFe\arquivos\templates\vm60\Danfe\RetratoSimplificado.rtm
+LogotipoEmitente=.\imagens\logo.jpg
+LineDelimiter=|
+ImprimirVolume=0
+mensagemPartilhaAutomatica=0
+ImprimirUnidadeTributada=0
+DanfeSimplificado=0
+ModeloRTMCCe=
+MensagemFCP=1
+ImprimirObsCont=1
+ImprimirFrenteVerso=DESABILITADO

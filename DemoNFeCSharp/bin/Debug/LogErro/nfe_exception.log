@@ -1,0 +1,8 @@
+[03/01/2020 14:41:23:729] 34204 - EspdConfigINIException : Arquivo D:\Git\Demos_NF\C#\Demo NFe CSharp\DemoNFeCSharp\DemoNFeCSharp\bin\Debug\nfeconfig.ini não foi encontrado
+[03/01/2020 15:35:23:185] 5972 - EspdNFeDataSetException : Ocorreu um erro durante a conversão do XML com a seguinte mensagem: Arquivo de template do conversor não encontrado: D:\Git\Demos_NF\C#\Demo NFe CSharp\DemoNFeCSharp\DemoNFeCSharp\bin\Debug\Templates\vm50\Conversor\NFeDataSets.xml
+[03/01/2020 15:58:55:562] 32624 - EspdNFeCheckParams : Número do Recibo deve ter exatamente 15 dígitos: 
+[03/01/2020 16:07:08:248] 34028 - EspdNFeDataSetException : Ocorreu um erro durante a conversão do XML com a seguinte mensagem: O Campo [xLgr_E06] referente a [Logradouro] deve ser preenchido.
+[03/01/2020 17:18:10:695] 33100 - EspdNFeException : Erro ao enviar CCe: O Texto de Correção deve ter no mínimo 15 Caracteres
+[03/01/2020 17:20:27:003] 35300 - EspdNFeException : Erro ao enviar CCe: Favor Preencher Órgão.
+[03/01/2020 17:26:01:101] 35488 - EspdCheckParams : Log de consulta de Recibo não informado
+[03/01/2020 17:31:56:079] 35656 - EspdNFeCheckParams : O Ano da Inutilização deve ser entre 06 e 20

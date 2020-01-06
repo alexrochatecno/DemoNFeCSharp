@@ -1,0 +1,15 @@
+D:\Git\Demos_NF\C#\Demo NFe CSharp\DemoNFeCSharp\DemoNFeCSharp\bin\Debug\DemoNFeCSharp.exe
+D:\Git\Demos_NF\C#\Demo NFe CSharp\DemoNFeCSharp\DemoNFeCSharp\bin\Debug\DemoNFeCSharp.pdb
+D:\Git\Demos_NF\C#\Demo NFe CSharp\DemoNFeCSharp\DemoNFeCSharp\obj\Debug\Interop.NFeDataSetX.dll
+D:\Git\Demos_NF\C#\Demo NFe CSharp\DemoNFeCSharp\DemoNFeCSharp\obj\Debug\Interop.NFeX.dll
+D:\Git\Demos_NF\C#\Demo NFe CSharp\DemoNFeCSharp\DemoNFeCSharp\obj\Debug\Interop.ValidadorClientX.dll
+D:\Git\Demos_NF\C#\Demo NFe CSharp\DemoNFeCSharp\DemoNFeCSharp\obj\Debug\Interop.Validador_events.dll
+D:\Git\Demos_NF\C#\Demo NFe CSharp\DemoNFeCSharp\DemoNFeCSharp\obj\Debug\DemoNFeCSharp.csproj.ResolveComReference.cache
+D:\Git\Demos_NF\C#\Demo NFe CSharp\DemoNFeCSharp\DemoNFeCSharp\obj\Debug\DemoNFeCSharp.FrmEventos.resources
+D:\Git\Demos_NF\C#\Demo NFe CSharp\DemoNFeCSharp\DemoNFeCSharp\obj\Debug\DemoNFeCSharp.FrmPrincipal.resources
+D:\Git\Demos_NF\C#\Demo NFe CSharp\DemoNFeCSharp\DemoNFeCSharp\obj\Debug\DemoNFeCSharp.Properties.Resources.resources
+D:\Git\Demos_NF\C#\Demo NFe CSharp\DemoNFeCSharp\DemoNFeCSharp\obj\Debug\DemoNFeCSharp.csproj.GenerateResource.cache
+D:\Git\Demos_NF\C#\Demo NFe CSharp\DemoNFeCSharp\DemoNFeCSharp\obj\Debug\DemoNFeCSharp.csproj.CoreCompileInputs.cache
+D:\Git\Demos_NF\C#\Demo NFe CSharp\DemoNFeCSharp\DemoNFeCSharp\obj\Debug\DemoNFeCSharp.exe
+D:\Git\Demos_NF\C#\Demo NFe CSharp\DemoNFeCSharp\DemoNFeCSharp\obj\Debug\DemoNFeCSharp.pdb
+D:\Git\Demos_NF\C#\Demo NFe CSharp\DemoNFeCSharp\DemoNFeCSharp\obj\Debug\DemoNFeCSharp.csprojAssemblyReference.cache
