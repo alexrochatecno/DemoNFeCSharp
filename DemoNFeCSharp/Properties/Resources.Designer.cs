@@ -71,29 +71,42 @@ namespace DemoNFeCSharp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [NFSE]
-        ///
-        ///;CIDADE=UBERLANDIA
-        ///; CIDADE=MANDAGUARIPR
-        ///;CIDADE=JUAZEIROBA
-        ///HORTOLANDIASP
-        ///CIDADE=PORTOALEGRERS
-        ///CNPJ=03979726000106
-        ///InscricaoMunicipal=118787
-        ///
-        ///
-        ///NomeCertificado=CN=GRAFICA CINELANDIA LTDA:61148045000100, OU=AR SERASA, O=ICP-Brasil, C=BR, S=SP, L=SAO PAULO, E=, SE=25 6A 4F 3D E9 B0 62 F5
-        ///
-        ///; CpfCnpjRemetente=73418386000120
-        ///; RazaoSocialRemetente=MN PUBLICIDADE AR LIVRE LTDA
-        ///; QuantidadeRps=1
-        ///; CodigoCidadeRemetente=3513009
-        ///;CIDADE=FLORIANOPOLISSC
-        ///;NomeCertificado=CN=TECNOSPEED SA:08187 [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to [NFE]
+        ///UF=PR
+        ///CNPJ=08187168000160
+        ///ArquivoServidoresHom=C:\Program Files\TecnoSpeed\NFe\arquivos\nfeServidoresHom.ini
+        ///ArquivoServidoresProd=C:\Program Files\TecnoSpeed\NFe\arquivos\nfeServidoresProd.ini
+        ///DiretorioEsquemas=C:\Program Files\TecnoSpeed\NFe\arquivos\Esquemas
+        ///DiretorioTemplates=C:\Program Files\TecnoSpeed\NFe\arquivos\Templates
+        ///DiretorioLog=Log\
+        ///DiretorioLogErro=LogErro\
+        ///DiretorioTemporario=Temporario\
+        ///TipoCertificado=FILE
+        ///NomeCertificado=CN=TECNOSPEED SA:08187168000160, OU=Certificado PJ [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string nfeConfig {
             get {
                 return ResourceManager.GetString("nfeConfig", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap notepad_512 {
+            get {
+                object obj = ResourceManager.GetObject("notepad-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap notepad_5121 {
+            get {
+                object obj = ResourceManager.GetObject("notepad-5121", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

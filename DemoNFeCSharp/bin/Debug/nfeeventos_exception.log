@@ -1,0 +1,2 @@
+[09/01/2020 09:34:17:048] 46488 - EspdNFeDescompactarXMLException : Verifique se o conteúdo informado é um xml compactado válido
+[09/01/2020 09:34:17:050] 46488 - EspdNFeDescompactarXMLException : Ocorreu um erro ao descompactar o XML: Verifique se o conteúdo informado é um xml compactado válido

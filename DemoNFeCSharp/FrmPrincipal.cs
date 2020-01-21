@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using ValidadorClientX;
 using System.Xml;
 using DemoNFeCSharp.Properties;
+using DemoNFeCSharp.Utils;
 
 namespace DemoNFeCSharp
 {
@@ -463,7 +464,7 @@ namespace DemoNFeCSharp
 
         private void BtnConsultaDFeChave_Click(object sender, EventArgs e)
         {
-            txtXML.Text = spdNFe.ConsultarDistribuicaoDFeChave("41", spdNFe.CNPJ, txtIdNota.Text);
+            txtXML.Text = spdNFe.ConsultarDistribuicaoDFeChave("51", spdNFe.CNPJ, txtIdNota.Text);
         }
 
         private void BtnPreverDanfe_Click(object sender, EventArgs e)
@@ -658,12 +659,104 @@ namespace DemoNFeCSharp
         {
             try
             {
-                txtXML.Text = spdNFe.ConsultarDistribuicaoDFeChave("43", txtCNPJ.Text, txtIdNota.Text);
+                //txtXML.Text = spdNFe.ConsultarDistribuicaoDFeChave("43", txtCNPJ.Text, txtIdNota.Text);
+                var listaNotasDestinadas = ConsultaNotasDestinadas();
+                var frmListaNotasDestinadas = new FrmListaNotasDistribuicaoDFe();
+
+                txtIdNota.Text = frmListaNotasDestinadas.ShowDialogWithResult(listaNotasDestinadas);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private IList<NotaDestinada> ConsultaNotasDestinadas()
+        {
+            var aCodigoUf = Interaction.InputBox("Informe o código da UF", "ConsultarDistribuicaoDFe", "41");
+            var aNSU = Interaction.InputBox("Informe o inicio da sequencia NSU", "ConsultarDistribuicaoDFe", "000000000000000");
+
+            var aTipoNSU = MessageBox.Show("aNSU é específico",
+                                           "ConsultarDistribuicaoDFe",
+                                           MessageBoxButtons.YesNo,
+                                           MessageBoxIcon.Question) == DialogResult.Yes ? TipoNSU.nkEspecifico : TipoNSU.nkUltimo;
+
+            var xml = String.Empty;
+            var ultimoNSU = String.Empty;
+            var cStat = String.Empty;
+            var ultNSU = String.Empty;
+            var maxNSU = String.Empty;
+            var proximaConsulta = true;
+            var listaNotasDestinadas = new List<NotaDestinada>();
+
+            do
+            {
+                xml = spdNFe.ConsultarDistribuicaoDFe(aCodigoUf, spdNFe.CNPJ, aNSU, aTipoNSU);
+                cStat = GetTagValueXml(xml, "cStat");
+
+                if (!cStat.Equals("138"))
+                {
+                    proximaConsulta = false;
+                    break;
+                }
+
+                ultNSU = GetTagValueXml(xml, "ultNSU");
+                maxNSU = GetTagValueXml(xml, "maxNSU");
+                proximaConsulta = cStat.Equals("138") && aNSU != maxNSU;
+
+                aNSU = ultNSU;
+
+                var documentXml = new XmlDocument();
+                documentXml.LoadXml(xml);
+                var xmlNodes = documentXml.GetElementsByTagName("docZip");
+
+                foreach (XmlNode node in xmlNodes)
+                {
+                    var conteudoDocZip = node.InnerText;
+                    var conteudoDescompactado = spdNFe.DescompactarXMLZip(conteudoDocZip);
+                    var schema = node.Attributes["schema"].InnerText;
+                    var chaveNfe = ObterChaveNFe(schema, conteudoDescompactado);
+
+                    var notaDestinada = new NotaDestinada();
+                    notaDestinada.Nsu = node.Attributes["NSU"].InnerText;
+                    notaDestinada.Schema = schema;
+                    notaDestinada.ConteudoOriginal = conteudoDocZip;
+                    notaDestinada.ConteudoDescompactado = conteudoDescompactado;
+                    notaDestinada.Chave = chaveNfe;
+
+                    listaNotasDestinadas.Add(notaDestinada);
+                }
+
+            } while (proximaConsulta);
+
+            return listaNotasDestinadas;
+        }
+
+        private string ObterChaveNFe(string schema, string conteudoDescompactado)
+        {
+            schema = schema.ToUpper();
+            var result = String.Empty;
+
+            switch (schema)
+            {
+                case "PROCEVENTONFE_V1.00.XSD":
+                    result = GetAttributeTagValueXML(conteudoDescompactado, "infEvento", "Id").Substring(2, 44);
+                    break;
+
+                case "RESEVENTO_V1.01.XSD":
+                    result = GetTagValueXml(conteudoDescompactado, "chNFe");
+                    break;
+
+                case "RESNFE_V1.01.XSD":
+                    result = GetTagValueXml(conteudoDescompactado, "chNFe");
+                    break;
+
+                case "PROCNFE_V4.00.XSD":
+                    result = GetAttributeTagValueXML(conteudoDescompactado, "infNFe", "Id").Substring(3, 44);
+                    break;
+            }
+
+            return result;
         }
 
         private void BtnEPECGerarViaDataSet_Click(object sender, EventArgs e)
